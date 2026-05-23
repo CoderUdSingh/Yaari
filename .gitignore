@@ -1,0 +1,21 @@
+# Dependencies
+node_modules
+pnpm-debug.log
+pnpm-error.log
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+logs
+*.log
