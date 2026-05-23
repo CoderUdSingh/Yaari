@@ -4,34 +4,38 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
-    # react app 'apps/web' folder me hai
-    defaults:
-      run:
-        working-directory: ./apps/web
-
     steps:
-      # Updated to v4 (Modern GitHub Standard)
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      # Updated to v4 and synced with local Node version
+      # 1. GitHub server par PNPM install karna
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      # 2. Node.js setup aur PNPM cache (Isse build bohot fast hogi)
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "24"
+          cache: "pnpm"
 
+      # 3. ROOT directory me saare packages install honge (Monorepo rule)
       - name: Install Dependencies
-        run: npm install
+        run: pnpm install
 
+      # 4. Sirf frontend (web) wale folder ke andar ghus kar build chalayenge
       - name: Build the Project
-        run: npm run build
+        run: pnpm run build
+        working-directory: ./apps/web
 
-      # Updated to v4 (Handles the latest AWS SDKs without deprecation warnings)
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
@@ -39,5 +43,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
 
+      # 5. S3 par upload karna ('dist' folder apps/web ke andar banega)
       - name: Deploy to S3
         run: aws s3 sync ./dist s3://${{ secrets.S3_BUCKET_NAME }} --delete
+        working-directory: ./apps/web
