@@ -49,7 +49,7 @@ const LeftSidebar = () => {
           src={
             user?.profilePic
               ? `https://res.cloudinary.com/dlbpqlhzt/image/upload/w_100,h_100,c_fill,q_auto,f_auto/yaari-s3/${user.profilePic}`
-              : "https://static.wikitide.net/deathbattlewiki/1/1c/Portrait.kratos.png"
+              : "https://ui-avatars.com/api/?name=Uddeshya&background=random&color=fff&size=40"
           }
           alt="ProfilePic"
           className="w-10 h-10 rounded-full object-cover border border-gray-200"

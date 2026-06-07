@@ -12,7 +12,7 @@ const PostCard = () => {
         <div className="flex items-center gap-3">
           {/* Temporary placeholder image, baad me DB se aayegi */}
           <img
-            src="https://static.wikitide.net/deathbattlewiki/1/1c/Portrait.kratos.png"
+            src="https://ui-avatars.com/api/?name=Uddeshya&background=random&color=fff&size=40"
             alt="User"
             className="w-10 h-10 rounded-full object-cover border border-gray-200"
           />
@@ -37,7 +37,7 @@ const PostCard = () => {
       </div>
       {/* Agar post me image hai toh ye dikhega */}
       <img
-        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1000&auto=format&fit=crop"
+        src="https://ui-avatars.com/api/?name=Uddeshya&background=random&color=fff&size=40"
         alt="Post Content"
         className="w-full h-auto max-h-125 object-cover"
       />
