@@ -15,9 +15,7 @@ const Navbar = () => {
           id="profilepic"
           className="justify-self-start  flex items-center justify-center gap-2"
         >
-          <h1 className="text-3xl font-extrabold text-blue-600 ">
-            Yaari
-          </h1>
+          <h1 className="text-3xl font-extrabold text-blue-600 ">Yaari</h1>
           <input
             type="search"
             className="w-60 bg-gray-100 rounded-full px-4 py-2 outline-none text-sm placeholder-gray-500"
@@ -45,7 +43,7 @@ const Navbar = () => {
             src={
               user?.profilePic
                 ? `https://res.cloudinary.com/dlbpqlhzt/image/upload/w_100,h_100,c_fill,q_auto,f_auto/yaari-s3/${user.profilePic}`
-                : "https://via.placeholder.com/40"
+                : "https://static.wikitide.net/deathbattlewiki/1/1c/Portrait.kratos.png"
             }
             alt="ProfilePic"
             className="w-10 h-10 rounded-full object-cover border border-gray-200 cursor-pointer"

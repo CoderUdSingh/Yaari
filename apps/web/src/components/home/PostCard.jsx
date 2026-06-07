@@ -12,8 +12,7 @@ const PostCard = () => {
         <div className="flex items-center gap-3">
           {/* Temporary placeholder image, baad me DB se aayegi */}
           <img
-            src="https://via.placeholder.com/40"
-            
+            src="https://static.wikitide.net/deathbattlewiki/1/1c/Portrait.kratos.png"
             alt="User"
             className="w-10 h-10 rounded-full object-cover border border-gray-200"
           />

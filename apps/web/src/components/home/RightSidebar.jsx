@@ -5,10 +5,10 @@ import { BsThreeDots } from "react-icons/bs";
 const RightSidebar = () => {
   // Dummy online friends data
   const onlineFriends = [
-    { id: 1, name: "Aman Gupta", image: "https://via.placeholder.com/40" },
-    { id: 2, name: "Priya Sharma", image: "https://via.placeholder.com/40" },
-    { id: 3, name: "Vikash Singh", image: "https://via.placeholder.com/40" },
-    { id: 4, name: "Neha Verma", image: "https://via.placeholder.com/40" },
+    { id: 1, name: "Aman Gupta", image: "https://static.wikitide.net/deathbattlewiki/1/1c/Portrait.kratos.png" },
+    { id: 2, name: "Priya Sharma", image: "https://static.wikitide.net/deathbattlewiki/1/1c/Portrait.kratos.png" },
+    { id: 3, name: "Vikash Singh", image: "https://static.wikitide.net/deathbattlewiki/1/1c/Portrait.kratos.png" },
+    { id: 4, name: "Neha Verma", image: "https://static.wikitide.net/deathbattlewiki/1/1c/Portrait.kratos.png" },
   ];
 
   return (
