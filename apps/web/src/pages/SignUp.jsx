@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
-import axiosInstance from "../api/axios";
+import axiosInstance from "../utils/axiosInstance";
 import { Link, useNavigate } from "react-router-dom";
 
 const month_names = [

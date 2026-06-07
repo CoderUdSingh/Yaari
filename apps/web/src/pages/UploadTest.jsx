@@ -1,5 +1,5 @@
 import { useState } from "react";
-import axiosInstance from "../api/axios";
+import axiosInstance from "../utils/axiosInstance";
 import axios from "axios";
 
 const UploadTest = () => {
